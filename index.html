@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
     * {
       margin: 0;
@@ -38,16 +39,6 @@
       height: 100%;
       object-fit: cover;
       display: block;
-    }
-
-    .hero-image .placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #999;
-      font-size: 1rem;
     }
 
     .hero-content {
@@ -175,33 +166,73 @@
 
   <section class="hero">
     <div class="hero-image">
-      <!-- Replace src with your photo -->
-      <img src="photo.png" alt="Shree Thirunavukkarasu">
+      <img id="hero-photo" src="/images/photo.png" alt="Shree Thirunavukkarasu">
     </div>
     <div class="hero-content">
-      <h1>Shree Thirunavukkarasu</h1>
-      <p class="tagline">10+ Year Product Manager | SaaS Leader and Business Transformation Leader | Scaling Products Across Enterprise Ecosystems</p>
-      <a href="mailto:sriranjani1220@gmail.com" class="cta">Reach out</a>
+      <h1 id="hero-name">Shree Thirunavukkarasu</h1>
+      <p id="hero-tagline" class="tagline">10+ Year Product Manager | SaaS Leader and Business Transformation Leader | Scaling Products Across Enterprise Ecosystems</p>
+      <a id="hero-cta" href="mailto:sriranjani1220@gmail.com" class="cta">Reach out</a>
     </div>
   </section>
 
   <section class="links-section">
     <h2>Connect with me</h2>
     <div class="links-list">
-      <a href="https://www.linkedin.com/in/shree-thiru/" target="_blank" rel="noopener">
+      <a id="link-linkedin" href="https://www.linkedin.com/in/shree-thiru/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <a href="mailto:sriranjani1220@gmail.com">
+      <a id="link-email" href="mailto:sriranjani1220@gmail.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        sriranjani1220@gmail.com
+        <span id="link-email-text">sriranjani1220@gmail.com</span>
       </a>
     </div>
   </section>
 
   <footer class="footer">
-    &copy; 2026 Shree Thirunavukkarasu
+    &copy; 2026 <span id="footer-name">Shree Thirunavukkarasu</span>
   </footer>
 
+  <script>
+    // Load content from CMS-managed JSON
+    fetch('/content/settings.json')
+      .then(r => r.json())
+      .then(data => {
+        if (data.name) {
+          document.getElementById('hero-name').textContent = data.name;
+          document.getElementById('footer-name').textContent = data.name;
+          document.getElementById('hero-photo').alt = data.name;
+        }
+        if (data.tagline) {
+          document.getElementById('hero-tagline').textContent = data.tagline;
+        }
+        if (data.email) {
+          document.getElementById('hero-cta').href = 'mailto:' + data.email;
+          document.getElementById('link-email').href = 'mailto:' + data.email;
+          document.getElementById('link-email-text').textContent = data.email;
+        }
+        if (data.photo) {
+          document.getElementById('hero-photo').src = data.photo;
+        }
+        if (data.linkedin) {
+          document.getElementById('link-linkedin').href = data.linkedin;
+        }
+        if (data.cta_text) {
+          document.getElementById('hero-cta').textContent = data.cta_text;
+        }
+      })
+      .catch(() => {});
+
+    // Redirect after Netlify Identity login
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
