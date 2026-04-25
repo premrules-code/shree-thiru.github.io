@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Cloud Lead Pass Workflow - Shree's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; background: #f5f3f0; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; background: #e8e4df; }
+    nav a { text-decoration: none; color: #1a1a1a; }
+    nav .logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; }
+    nav .back { font-size: 0.85rem; font-weight: 500; opacity: 0.7; }
+    nav .back:hover { opacity: 1; }
+
+    .hero-banner {
+      background: linear-gradient(135deg, #1a3a4a, #2a5a6a);
+      color: #fff;
+      padding: 4rem 3rem;
+    }
+    .hero-banner .tags { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: #8ab; margin-bottom: 1rem; }
+    .hero-banner h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero-banner .subtitle { font-size: 1.05rem; line-height: 1.7; color: #bcd; max-width: 700px; }
+
+    .metrics-bar {
+      display: flex;
+      gap: 1.5rem;
+      padding: 2rem 3rem;
+      background: #fff;
+      flex-wrap: wrap;
+    }
+    .metric-item {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+      padding: 1rem;
+      border-right: 1px solid #eee;
+    }
+    .metric-item:last-child { border-right: none; }
+    .metric-item .value { font-size: 1.8rem; font-weight: 700; color: #1a3a4a; }
+    .metric-item .label { font-size: 0.7rem; color: #999; text-transform: uppercase; margin-top: 0.3rem; }
+
+    .content { max-width: 900px; margin: 0 auto; padding: 3rem; }
+    .content h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 2.5rem 0 1rem; color: #1a3a4a; }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 0.95rem; line-height: 1.8; color: #444; margin-bottom: 1rem; }
+    .content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+    .content li { font-size: 0.9rem; line-height: 1.8; color: #444; margin-bottom: 0.5rem; }
+    .content strong { color: #1a1a1a; }
+
+    .artifact-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .callout {
+      background: #e8e4df;
+      border-left: 4px solid #1a3a4a;
+      padding: 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+    .callout p { margin: 0; color: #333; }
+
+    footer { text-align: center; padding: 3rem; color: #999; font-size: 0.8rem; border-top: 1px solid #e0e0e0; }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero-banner { padding: 2.5rem 1.5rem; }
+      .hero-banner h1 { font-size: 1.8rem; }
+      .metrics-bar { padding: 1rem 1.5rem; }
+      .content { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Shree's Product Portfolio</a>
+    <a href="/#projects" class="back">&larr; Back to Projects</a>
+  </nav>
+
+  <div class="hero-banner">
+    <div class="tags">FY25 GTM Change &middot; Salesforce Org62 &middot; Lead Referral Platform</div>
+    <h1>Data Cloud Lead Pass Workflow</h1>
+    <p class="subtitle">A fully automated lead referral platform enabling Tableau AEs to seamlessly pass qualified Data Cloud leads to Core AEs, preserving pipeline momentum post-SKU sunset and unlocking Data Cloud ACV growth.</p>
+  </div>
+
+  <div class="metrics-bar">
+    <div class="metric-item">
+      <div class="value">$100M+</div>
+      <div class="label">Tableau DC Pipeline FY24</div>
+    </div>
+    <div class="metric-item">
+      <div class="value">4 Weeks</div>
+      <div class="label">Build &amp; Delivery</div>
+    </div>
+    <div class="metric-item">
+      <div class="value">3 Roles</div>
+      <div class="label">Tableau &middot; Core &middot; DC</div>
+    </div>
+    <div class="metric-item">
+      <div class="value">100%</div>
+      <div class="label">FY24 Opportunity Capture</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>The Problem</h2>
+    <p>Salesforce was sunsetting the Tableau Data Cloud SKU, leaving thousands of Tableau sales reps with no structured way to hand off interested Data Cloud customers to the right specialist. Data Cloud, one of Salesforce's fastest-growing products, was contributing only <strong>5% of total pipeline</strong>, far below its potential.</p>
+    <p>Without a formal handoff mechanism, reps had no visibility or financial credit after passing a lead, which killed incentive to refer deals and silently destroyed pipeline that should have converted to revenue.</p>
+
+    <h2>What Was Built</h2>
+    <p>A fully automated, end-to-end lead referral platform inside Salesforce Org62, delivered in <strong>4 weeks</strong> with a small, focused team:</p>
+    <ul>
+      <li>A <strong>custom Lead Pass object</strong> in Org62 with a dedicated Lightning Record Page</li>
+      <li>A <strong>"Data Cloud Lead Pass" button</strong> on Contact records, visible only to eligible Tableau AEs via role-based access</li>
+      <li>An <strong>eligibility validation engine</strong> that checks user and account qualification before submission</li>
+      <li>A <strong>guided screenflow</strong> with qualifying questions for the Tableau AE</li>
+      <li><strong>Real-time Slack notifications</strong> to Core AEs and Data Cloud AEs with accept/reject buttons</li>
+      <li><strong>Auto-creation of a Stage 02 sales opportunity</strong> upon lead acceptance</li>
+      <li>A <strong>compensation reporting view</strong> for proper incentive tracking</li>
+      <li><strong>FY24 historical data migration</strong> of all eligible open opportunities at go-live</li>
+    </ul>
+
+    <img src="/images/projects/lead-pass-flow.jpg" alt="Lead Pass Framework - Flow Diagram" class="artifact-img">
+
+    <h2>Key Outcomes</h2>
+    <ul>
+      <li>Launched a fully automated lead referral platform targeting growth beyond the 5% pipeline baseline, positioning the business to <strong>close 10-20% of a ~$100M opportunity in FY25</strong></li>
+      <li>Achieved <strong>100% capture of all eligible FY24 open opportunities</strong> into the new system at go-live</li>
+      <li>Replaced an informal, invisible handoff process with a <strong>transparent, accountable workflow</strong></li>
+      <li>Target: >50% adoption among eligible Tableau AEs in first 60 days, <2 business day median response time</li>
+    </ul>
+
+    <h2>Lessons Learned</h2>
+    <div class="callout">
+      <p><strong>Data hygiene was a hidden dependency:</strong> Auto-routing leads to the right specialist relied entirely on account team records being accurate. Clean data proved as critical as the product itself.</p>
+    </div>
+    <div class="callout">
+      <p><strong>Backend validation rules nearly blocked launch:</strong> Automatic opportunity creation hit Salesforce validation rules that surfaced late, requiring a full audit of downstream dependencies.</p>
+    </div>
+    <div class="callout">
+      <p><strong>Parallel enablement was key:</strong> Sales enablement and training ran alongside the build so reps were ready globally on day one.</p>
+    </div>
+
+    <h2>Team</h2>
+    <p>1 PM, 1-2 BT Engineers, 1 GSX Lead, 1 Enablement Lead, plus a separate data migration resource.</p>
+  </div>
+
+  <footer>&copy; 2026 Shree Thirunavukkarasu</footer>
+</body>
+</html>

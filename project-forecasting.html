@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialist Revenue Forecasting Platform - Shree's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; background: #f5f3f0; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; background: #e8e4df; }
+    nav a { text-decoration: none; color: #1a1a1a; }
+    nav .logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; }
+    nav .back { font-size: 0.85rem; font-weight: 500; opacity: 0.7; }
+    nav .back:hover { opacity: 1; }
+
+    .hero-banner { background: linear-gradient(135deg, #1a3a4a, #2a5a6a); color: #fff; padding: 4rem 3rem; }
+    .hero-banner .tags { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: #8ab; margin-bottom: 1rem; }
+    .hero-banner h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero-banner .subtitle { font-size: 1.05rem; line-height: 1.7; color: #bcd; max-width: 700px; }
+
+    .metrics-bar { display: flex; gap: 1.5rem; padding: 2rem 3rem; background: #fff; flex-wrap: wrap; }
+    .metric-item { flex: 1; min-width: 150px; text-align: center; padding: 1rem; border-right: 1px solid #eee; }
+    .metric-item:last-child { border-right: none; }
+    .metric-item .value { font-size: 1.8rem; font-weight: 700; color: #1a3a4a; }
+    .metric-item .label { font-size: 0.7rem; color: #999; text-transform: uppercase; margin-top: 0.3rem; }
+
+    .content { max-width: 900px; margin: 0 auto; padding: 3rem; }
+    .content h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 2.5rem 0 1rem; color: #1a3a4a; }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 0.95rem; line-height: 1.8; color: #444; margin-bottom: 1rem; }
+    .content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+    .content li { font-size: 0.9rem; line-height: 1.8; color: #444; margin-bottom: 0.5rem; }
+    .content strong { color: #1a1a1a; }
+
+    .artifact-img { width: 100%; border-radius: 10px; margin: 1.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .img-grid img { width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+    .callout { background: #e8e4df; border-left: 4px solid #1a3a4a; padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    .callout p { margin: 0; color: #333; }
+
+    footer { text-align: center; padding: 3rem; color: #999; font-size: 0.8rem; border-top: 1px solid #e0e0e0; }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero-banner { padding: 2.5rem 1.5rem; }
+      .hero-banner h1 { font-size: 1.8rem; }
+      .metrics-bar { padding: 1rem 1.5rem; }
+      .content { padding: 2rem 1.5rem; }
+      .img-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Shree's Product Portfolio</a>
+    <a href="/#projects" class="back">&larr; Back to Projects</a>
+  </nav>
+
+  <div class="hero-banner">
+    <div class="tags">Salesforce &middot; Global Sales Org &middot; Product &middot; Forecasting</div>
+    <h1>Specialist Revenue Forecasting Platform</h1>
+    <p class="subtitle">A collaborative, config-driven forecasting tool that brings product specialists and their leadership onto one shared plan, blending data with expert insights to deliver accurate, actionable revenue forecasts at global scale.</p>
+  </div>
+
+  <div class="metrics-bar">
+    <div class="metric-item">
+      <div class="value">5,000+</div>
+      <div class="label">Product Specialists Global</div>
+    </div>
+    <div class="metric-item">
+      <div class="value">99%</div>
+      <div class="label">Forecast Data Accuracy</div>
+    </div>
+    <div class="metric-item">
+      <div class="value">100%</div>
+      <div class="label">User Adoption Global</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>The Problem</h2>
+    <p>Account sellers (product specialists) needed their own dedicated space to create a <strong>single shared forecast</strong> they could collaborate on with their leadership. The existing legacy system was a persistent source of forecast errors and manual rework.</p>
+    <p>The rapidly changing GTM org structure made maintaining alignment even harder. With <strong>5,000+ product specialists globally</strong>, there was no unified way to blend data with expert insights for accurate revenue planning.</p>
+
+    <h2>What Was Built</h2>
+    <p>A Specialist Forecasting Platform built on Salesforce's Collaborative Forecasting capabilities:</p>
+    <ul>
+      <li>A <strong>flexible, configuration-based solution</strong> to keep product specialist forecasts aligned with GTM changes</li>
+      <li>A complete <strong>data model</strong> including Forecasting Quota, Forecasting Item, Forecasting Adjustment, and Forecasting Owner Adjustment with parent/child hierarchies</li>
+      <li>The platform connects <strong>Sales, Operations, Finance, and Marketing</strong> in a continuous collaborative cycle</li>
+      <li><strong>Structured RBAC</strong> for different personas (SEs, product leadership, product specialists)</li>
+      <li><strong>Dashboard capabilities</strong> built on the specialist forecast data model for business health insights</li>
+      <li><strong>Severity-based triaging routes</strong> to manage the high maintenance of the config tool</li>
+    </ul>
+
+    <div class="img-grid">
+      <img src="/images/projects/forecasting-cycle.png" alt="Collaborative Forecasting Cycle">
+      <img src="/images/projects/forecasting-deal.png" alt="Deal Management Cycle Integration">
+    </div>
+
+    <h2>Key Outcomes</h2>
+    <ul>
+      <li>Adopted by <strong>5,000+ product specialists globally</strong></li>
+      <li>Achieved <strong>99% data accuracy</strong> and <strong>100% user adoption</strong></li>
+      <li>Replaced a legacy system that had been a persistent source of forecast errors and manual rework</li>
+      <li>Delivered <strong>significant gains in planning efficiency</strong> by eliminating manual data reconciliation</li>
+      <li>Transformed how a global sales organization plans and predicts revenue</li>
+    </ul>
+
+    <h2>Lessons Learned</h2>
+    <div class="callout">
+      <p><strong>Config-based approach traded flexibility for maintenance:</strong> The deliberately chosen config approach handled a rapidly changing GTM org structure, but came with high maintenance overhead, managed by introducing severity-based triaging routes.</p>
+    </div>
+    <div class="callout">
+      <p><strong>Scope expanded beyond original plan:</strong> Other stakeholders (SEs, product leadership) needed to collaborate through the tool, requiring structured RBAC for multiple personas.</p>
+    </div>
+    <div class="callout">
+      <p><strong>One forecast, one truth:</strong> "One forecast gets all product specialists and their leadership on the same page. Fewer misunderstandings, smoother execution, faster decisions."</p>
+    </div>
+  </div>
+
+  <footer>&copy; 2026 Shree Thirunavukkarasu</footer>
+</body>
+</html>

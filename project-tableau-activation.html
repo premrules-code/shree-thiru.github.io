@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau User Activation Tracking App - Shree's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; background: #f5f3f0; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; background: #e8e4df; }
+    nav a { text-decoration: none; color: #1a1a1a; }
+    nav .logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; }
+    nav .back { font-size: 0.85rem; font-weight: 500; opacity: 0.7; }
+    nav .back:hover { opacity: 1; }
+
+    .hero-banner { background: linear-gradient(135deg, #1a3a4a, #2a5a6a); color: #fff; padding: 4rem 3rem; }
+    .hero-banner .tags { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: #8ab; margin-bottom: 1rem; }
+    .hero-banner h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero-banner .subtitle { font-size: 1.05rem; line-height: 1.7; color: #bcd; max-width: 700px; }
+
+    .metrics-bar { display: flex; gap: 1.5rem; padding: 2rem 3rem; background: #fff; flex-wrap: wrap; }
+    .metric-item { flex: 1; min-width: 150px; text-align: center; padding: 1rem; border-right: 1px solid #eee; }
+    .metric-item:last-child { border-right: none; }
+    .metric-item .value { font-size: 1.8rem; font-weight: 700; color: #1a3a4a; }
+    .metric-item .label { font-size: 0.7rem; color: #999; text-transform: uppercase; margin-top: 0.3rem; }
+
+    .content { max-width: 900px; margin: 0 auto; padding: 3rem; }
+    .content h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 2.5rem 0 1rem; color: #1a3a4a; }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 0.95rem; line-height: 1.8; color: #444; margin-bottom: 1rem; }
+    .content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+    .content li { font-size: 0.9rem; line-height: 1.8; color: #444; margin-bottom: 0.5rem; }
+    .content strong { color: #1a1a1a; }
+
+    .artifact-img { width: 100%; border-radius: 10px; margin: 1.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .img-grid img { width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+    .callout { background: #e8e4df; border-left: 4px solid #1a3a4a; padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    .callout p { margin: 0; color: #333; }
+
+    footer { text-align: center; padding: 3rem; color: #999; font-size: 0.8rem; border-top: 1px solid #e0e0e0; }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero-banner { padding: 2.5rem 1.5rem; }
+      .hero-banner h1 { font-size: 1.8rem; }
+      .metrics-bar { padding: 1rem 1.5rem; }
+      .content { padding: 2rem 1.5rem; }
+      .img-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Shree's Product Portfolio</a>
+    <a href="/#projects" class="back">&larr; Back to Projects</a>
+  </nav>
+
+  <div class="hero-banner">
+    <div class="tags">Salesforce CRM Transformation &middot; Global Rollout &middot; Analytics</div>
+    <h1>Tableau User Activation Tracking App</h1>
+    <p class="subtitle">A context analytics platform giving leadership a real-time 360-degree view of 40,000 sales rep migration, tracking activation progress, feature adoption, and onboarding milestones across every rollout wave.</p>
+  </div>
+
+  <div class="metrics-bar">
+    <div class="metric-item">
+      <div class="value">40,000</div>
+      <div class="label">Sales Reps &middot; Global Migration</div>
+    </div>
+    <div class="metric-item">
+      <div class="value">10+</div>
+      <div class="label">Rollout Waves</div>
+    </div>
+    <div class="metric-item">
+      <div class="value">1,000+</div>
+      <div class="label">Enablement Hours Saved/Year</div>
+    </div>
+    <div class="metric-item">
+      <div class="value">$22.4B</div>
+      <div class="label">Total ACV Tracked</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>The Problem</h2>
+    <p>Salesforce leadership needed a comprehensive 360-degree view of the user activation process for a massive migration: <strong>40,000 sales reps and sales managers</strong> being moved in cohorts from a legacy CRM to a brand-new, AI-powered Salesforce Org.</p>
+    <p>Without this visibility, leadership was making cohort decisions on gut feel rather than evidence, and enablement teams were buried in manual spreadsheet-based reporting.</p>
+
+    <h2>What Was Built</h2>
+    <p>A cohort analytics application connecting enterprise data warehouse pipelines to a Tableau dashboard suite:</p>
+    <ul>
+      <li><strong>Overall Platform Activation Progress tracking</strong> showing activated users (11,240), in-progress (3,240), and remaining (25,520) out of 40,000</li>
+      <li><strong>Activation breakdowns by Segment</strong>: AMER 37%, EMEA 29%, APAC 12%, LATAM 12%, JAPAN 4%</li>
+      <li><strong>Breakdowns by Selling Role</strong>: Sales Cloud AE 40%, Service Cloud AE 26%, Marketing AE 15%, Tableau AE 5%, and more</li>
+      <li>A <strong>"Next Cohort Planner"</strong> ranking groups by ACV (low risk first) with Group, Segment, Role, Industry, ACV, Reps count, and Risk level</li>
+      <li>An <strong>ACV Analytics Dashboard</strong> with donut charts showing $22.4B total ACV across Product, Market Segment, Industry, and Selling Role</li>
+      <li><strong>Interactive parameters</strong> enabling teams to slice data by segment, role, and ACV to identify variance</li>
+    </ul>
+
+    <div class="img-grid">
+      <img src="/images/projects/tableau-progress.png" alt="Activation Progress Dashboard">
+      <img src="/images/projects/tableau-pie.png" alt="ACV Analytics Dashboard">
+    </div>
+
+    <h2>Key Outcomes</h2>
+    <ul>
+      <li><strong>Eliminated manual reporting entirely</strong>, freeing 1,000+ hours annually for enablement teams</li>
+      <li>Replaced spreadsheet-driven guesswork with a <strong>live, executive-ready insights platform</strong></li>
+      <li>Turned a high-risk deployment process into a <strong>data-driven, repeatable playbook</strong> for low-risk user activation at scale</li>
+    </ul>
+
+    <h2>Lessons Learned</h2>
+    <div class="callout">
+      <p><strong>Real-time refresh was unsustainable at scale:</strong> The team made a deliberate tradeoff to move to overnight refresh cycles, prioritizing data reliability and dashboard stability over immediacy.</p>
+    </div>
+    <div class="callout">
+      <p><strong>GTM-driven dataset changes created fragility:</strong> A single schema change could silently break downstream insights. This was resolved by establishing a formalized change process and RACI.</p>
+    </div>
+    <div class="callout">
+      <p><strong>The core tension:</strong> Moving fast enough to keep dashboards relevant without sacrificing the data integrity the entire migration strategy depended on.</p>
+    </div>
+  </div>
+
+  <footer>&copy; 2026 Shree Thirunavukkarasu</footer>
+</body>
+</html>
